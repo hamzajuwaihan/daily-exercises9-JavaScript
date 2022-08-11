@@ -72,7 +72,7 @@ Ex: greet("Adam")
 => "Hello Adam"
 */
 function greet(name) {
-  console.log('Hello '+name)
+  console.log('Hello ' + name)
 }
 greet("Adam")
 /*
@@ -159,16 +159,16 @@ Ex: canIGetADrivingLicense(20)
 => "yes you can"
 
 */
-function canIGetADrivingLicense(age){
+function canIGetADrivingLicense(age) {
   if (age >= 20) {
     return 'yes you can';
-  }else {
-    return `please come back after ${20-age} years to get one`;
+  } else {
+    return `please come back after ${20 - age} years to get one`;
   }
 }
-console.log( canIGetADrivingLicense(21))
+console.log(canIGetADrivingLicense(21))
 console.log(canIGetADrivingLicense(17))
-console.log( canIGetADrivingLicense(20))
+console.log(canIGetADrivingLicense(20))
 /*
 10
 Write a function called sameLength
@@ -183,11 +183,11 @@ Ex: sameLength("tree","clue")
 Ex: sameLength("tree","car")
 => false
 */
-function sameLength(str1,str2) {
+function sameLength(str1, str2) {
   return str1.length === str2.length;
 }
-console.log(sameLength("tree","clue"))
-console.log(sameLength("tree","car"))
+console.log(sameLength("tree", "clue"))
+console.log(sameLength("tree", "car"))
 
 
 /*
@@ -243,10 +243,10 @@ function smallerNubmer(num1, num2, num3) {
     return num3;
   }
 }
-console.log(smallerNubmer(8,6,7))
-console.log(smallerNubmer(5,99,34))
-console.log(smallerNubmer(5,99,3))
-console.log(smallerNubmer(5,3,3))
+console.log(smallerNubmer(8, 6, 7))
+console.log(smallerNubmer(5, 99, 34))
+console.log(smallerNubmer(5, 99, 3))
+console.log(smallerNubmer(5, 3, 3))
 
 /*
 13
@@ -483,24 +483,58 @@ Ex: scoreInUniversty(3)
 Ex: scoreInUniversty(71)
 => "C"
 */
-function scoreInUniversty(mark) {
-  if (mark >= 95 && mark <= 100) {
-    return 'A';
-  } else if (mark >= 85 && mark <= 94) {
-    return 'B';
-  } else if (mark >= 70 && mark <= 84) {
-    return 'C';
-  } else if (mark >= 50 && mark <= 69) {
-    return 'D';
-  } else if (mark >= 0 && mark <= 49) {
-    return 'F';
-  } else {
-    return 'INVALID MARK!';
+// function scoreInUniversty(mark) {
+//   if (mark >= 95 && mark <= 100) {
+//     return 'A';
+//   } else if (mark >= 85 && mark <= 94) {
+//     return 'B';
+//   } else if (mark >= 70 && mark <= 84) {
+//     return 'C';
+//   } else if (mark >= 50 && mark <= 69) {
+//     return 'D';
+//   } else if (mark >= 0 && mark <= 49) {
+//     return 'F';
+//   } else {
+//     return 'INVALID MARK!';
+//   }
+// }
+// function scoreInUniversty(mark) {
+//   switch (Math.round(mark / 10)) {
+//     case 10:
+//     case 9:
+//       return 'A';
+//     case 8:
+//       return 'B';
+//     case 7:
+//       return 'C';
+//     case 6:
+//       return 'D';
+//     case 5:
+//     case 4:
+//     case 3:
+//     case 2:
+//     case 1:
+//     case 0:
+//     return 'F';
+//   }
+// }
+function scoreInUniversity(x2) {
+  switch (true) {
+    case x2 >= 95 && x2 <= 100  : return ("youre grade is: A") ;
+    case x2 >= 85 && x2 <= 94 :
+       return("youre grade is: A") ; 
+    case x2 >= 70 && x2 <= 84 :
+       return("youre grade is: C"); 
+    case x2 >= 50 && x2 <= 69 :
+      return("youre grade is: D") ;
+    case x2 >= 0  && x2 <= 49 :
+       return("youre grade is: F" );
+
   }
 }
-console.log(scoreInUniversty(3));
-console.log(scoreInUniversty(96));
-console.log(scoreInUniversty(71));
+console.log(scoreInUniversity(3));
+console.log(scoreInUniversity(96));
+console.log(scoreInUniversity(71));
 
 /*
 23
@@ -521,13 +555,13 @@ Ex:
 */
 let countNum = 0;
 function counter() {
- return countNum+=1;
+  return countNum += 1;
 }
 console.log(counter());
 console.log(counter());
 console.log(counter());
 
-countNum =0;
+countNum = 0;
 /*
 24
 Write a function called resetCounter
