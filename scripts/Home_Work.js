@@ -105,10 +105,10 @@ function doubleValues(arr) {
         arr[i] = arr[i] * 2;
     }
 
-    return arr;
+    console.log(arr);
 }
-console.log(doubleValues([1, 2, 3]));
-console.log(doubleValues([5, 1, 2, 3, 10]));
+doubleValues([1, 2, 3]);
+doubleValues([5, 1, 2, 3, 10]);
 /*
 * Exercise:
 * Write a function called onlyEvenValues which accepts an array and returns a new array with only the even values in the array passed to the function
@@ -129,11 +129,11 @@ function onlyEvenValues(arr) {
             evenArray.push(arr[i])
         }
     }
-    return evenArray;
+    console.log(evenArray);
 }
 
-console.log(onlyEvenValues([1, 2, 3]))
-console.log(onlyEvenValues([5, 1, 2, 3, 10]))
+onlyEvenValues([1, 2, 3])
+onlyEvenValues([5, 1, 2, 3, 10])
 
 /*
 * Exercise:
@@ -350,10 +350,10 @@ function removeFromArrayWhileLoop(arr, element) {
         }
         i++;
     }
-
+    console.log(arr)
 
 }
-console.log(removeFromArrayWhileLoop(nums, 8));
+removeFromArrayWhileLoop(nums, 8);
 
 /*
 16
@@ -641,12 +641,16 @@ Ex: factorial(4); => 4 * 3 * 2 * 1 => 24
 */
 console.log('************ EXERCISE factorial ************************');
 function factorial(n){
-    let i= n;
-    while(i>2){
-        i =i-1;
+   let fact=1;
+    let i=n;
+    while(i>=1){
+        fact=fact*i;
+
+
         i--;
     }
-    return i;
+    return fact;
+
 }
 console.log(factorial(2))
 console.log(factorial(4))
@@ -663,12 +667,25 @@ Ex: repeatStr("to",2); => "to to"
 Ex: repeatStr("to",4); => "to to to to"
 */
 console.log('************ EXERCISE repeatStr ************************');
-// function repeatStr(str1,str2){
+function repeatStr(str1,num){
 
-//     let i=0;
-//     while()
-// }
+    let i=num;
+    let txt ='';
+    while(i!==0){
+        if(i>1){
+            txt +='to '
+            
+        }
+        else{
+            txt +='to'
+        }
 
+        i--;
+    }
+    console.log(txt)
+}
+repeatStr("to",2);
+repeatStr("to",4);
 /*
 4
 Create a function called sum2
@@ -748,8 +765,23 @@ numberBetweenUs(2,8) => "3, 4, 5, 6, 7"
 numberBetweenUs(1,3) => "2"
 */
 console.log('************ EXERCISE numberBetweenUs ************************');
-
-
+function numberBetweenUs(num1 , num2){
+    let diff= num2-num1;
+    let i =1;
+    let txt='';
+    while(num1!==num2-1){
+        if(num1+2 !== num2){
+            txt +=num1+1+', ';
+        }else{
+            txt +=num1+1;
+        }
+      
+        num1++;
+    }
+    console.log(txt);
+}
+numberBetweenUs(2,8)
+numberBetweenUs(1,3)
 /*
 8
 Write a function called countDown
@@ -893,19 +925,19 @@ function vowelCount(str){
         switch(true){
 
             case str[index] == 'a' || str[index] =='A':
-            obj.a= obj.a?obj.a++:1;
+            obj.a= obj.a?obj.a+=1:1;
             break;
             case str[index] == 'e' || str[index] =='E':
-            obj.e= obj.e?obj.e++:1;
+            obj.e= obj.e?obj.e+=1:1;
             break;
             case str[index] == 'i' || str[index] =='I':
-            obj.i= obj.i?obj.i++:1;
+            obj.i= obj.i?obj.i+=1:1;
             break;
             case str[index] == 'o' || str[index] =='O':
-            obj.o= obj.o?obj.o++:1;
+            obj.o= obj.o?obj.o+=1:1;
             break;
             case str[index] == 'u' || str[index] =='U':
-            obj.u= obj.u?obj.u++:1;
+            obj.u= obj.u?obj.u+=1:1;
             break;
         }
         
