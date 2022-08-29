@@ -164,9 +164,9 @@ function extractFullName(arr) {
 
 console.log(extractFullName([{ first: 'Elie', last: "Schoppik" }, { first: 'Tim', last: "Garcia" }, { first: 'Matt', last: "Lane" }, { first: 'Colt', last: "Steele" }]))
 
-//Filter 10 - 15 you should use Array.prototype.filter
+//Filter 11 - 15 you should use Array.prototype.filter
 /*
-10
+11
 Create a function called evenOnly
 that accept an array
 and return an array of even number only
@@ -183,7 +183,7 @@ console.log(r1)
 
 
 /*
-11
+12
 Create a function called multiFour
 that accept an array
 and return an array of these number that is a mutiply by 4
@@ -200,7 +200,7 @@ console.log(f1)
 
 
 /*
-12
+13
 **this question not that easy mybe you will need to use two function inside each other
 
 Create a function called containChar
@@ -223,7 +223,7 @@ console.log(containChar(["hello", "world"], "e"))
 
 
 /*
-13
+14
 Create a function called evenIndexOddLength
 that accept an array of strings
 and return an array that have the string with odd length in even index
@@ -245,7 +245,7 @@ function evenIndexOddLength(arr4) {
 
 
 /*
-14
+15
 Using the varabile persons
 Create a function called olderThan
 that accept an array and number
@@ -254,10 +254,16 @@ and return the person that have age older than this number
 Ex: olderThan(persons,56) => [{ name: { first: 'Soso', last: 'Al-Amora' }, age: 67 }]
 */
 
+let number = [1,8,6,4,5];
+let newNum = number.filter(evenOnly);
+function evenOnly(n){
+    return n%2==0
+}
+console.log(newNum)
 
 
 /*
-15
+16
 Create a function called shorterThan
 that accept an array of strings and a number
 and return the shorter string than the number
